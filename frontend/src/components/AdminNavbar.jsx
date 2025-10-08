@@ -30,6 +30,7 @@ const AdminNavbar = () => {
                 <li>
                   <Link
                     to="/admin/products"
+                    onClick={()=>setDropdown(!dropdown)}
                     className="hover:text-gray-200 transition-colors"
                   >
                     Product List
@@ -38,6 +39,7 @@ const AdminNavbar = () => {
                 <li>
                   <Link
                     to="/admin/categories"
+                    onClick={()=>setDropdown(!dropdown)}
                     className="hover:text-gray-200 transition-colors"
                   >
                     Categories

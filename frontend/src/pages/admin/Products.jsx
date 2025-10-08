@@ -9,21 +9,36 @@ import {
 } from "flowbite-react";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faEdit, faTrash} from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  Checkbox,
+  Label,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  TextInput,
+  FileInput,
+} from "flowbite-react";
+import { useState } from "react";
 
 const Products = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5">
-        <div className="md:col-span-2">
-          <div className="p-5 flex justify-between items-center bg-white shadow-md rounded-2xl">
+      <div className="">
+        <div className="bg-gray-100 m-7 p-7">
+          <div className="p-5 flex justify-between items-center">
             {/* Left side title */}
             <h2 className="text-xl font-semibold text-gray-700">
               Product List
             </h2>
 
             {/* Right side button */}
-            <Button color="red" className="rounded-xl px-4 py-2">
+            <Button
+              color="red"
+              className="rounded-xl px-4 py-2"
+              onClick={() => setOpenModal(true)}
+            >
               + Add New Product
             </Button>
           </div>
@@ -50,9 +65,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>30$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -65,9 +88,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -80,9 +111,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -95,9 +134,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -110,9 +157,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -125,9 +180,17 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
               <TableRow className="dark:border-gray-700 dark:bg-gray-800">
@@ -140,16 +203,58 @@ const Products = () => {
                 </TableCell>
                 <TableCell>Iphone</TableCell>
                 <TableCell>20$</TableCell>
-                <TableCell><FontAwesomeIcon icon={faEdit} className="dark:text-white text-2xl ml-2" /></TableCell>
                 <TableCell>
-                  <FontAwesomeIcon icon={faTrash} className="dark:text-white text-2xl ml-2" />
+                  <FontAwesomeIcon
+                    icon={faEdit}
+                    className="dark:text-white text-2xl ml-2"
+                  />
+                </TableCell>
+                <TableCell>
+                  <FontAwesomeIcon
+                    icon={faTrash}
+                    className="dark:text-white text-2xl ml-2"
+                  />
                 </TableCell>
               </TableRow>
             </TableBody>
           </Table>
         </div>
-       
       </div>
+      <>
+        <Modal
+          show={openModal}
+          size="lg"
+          popup
+          onClose={() => setOpenModal(false)}
+        >
+          <ModalHeader />
+          <ModalBody>
+            <div className="space-y-6">
+              <div className="text-2xl font-bold">Add New Product</div>
+
+              <div>
+                <Label className="mb-2 block" htmlFor="multiple-file-upload">
+                  Upload multiple files
+                </Label>
+                <FileInput id="multiple-file-upload" multiple />
+              </div>
+              <div>
+                <Label htmlFor="product-name">Product Name : </Label>
+                <TextInput id="product-name" />
+              </div>
+              <div>
+                <Label htmlFor="product-price">Price : </Label>
+                <TextInput id="product-price" />
+              </div>
+              <div className="flex justify-around">
+                <Button>Save Product</Button>
+                <Button color={"red"}>Clear</Button>
+                <Button color={"red"} onClick={() => setOpenModal(false)}>Cancel</Button>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+      </>
     </div>
   );
 };
