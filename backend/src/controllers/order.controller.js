@@ -92,7 +92,7 @@ const deleteOrder = async (req, res) => {
   try {
     const orderId = req.params.id;
     const orderExist = await orderModel.findById(orderId);
-    if (!orderExist) res.status(404).json({ message: "Order not found." });
+    if (!orderExist) return res.status(404).json({ message: "Order not found." });
     const deletedResponse = await orderModel.findByIdAndDelete(orderId);
     res
       .status(200)

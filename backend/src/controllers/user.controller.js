@@ -3,7 +3,8 @@ const bcrypt = require("bcrypt");
 const { generateToken } = require("../utils/jwt");
 
 const userRegister = async (req, res) => {
-  let { name, email, password } = req.body;
+  const image = req.file.filename
+  const { name, email, password } = req.body;
   try {
     const userExist = await userModel.findOne({ email });
     if (userExist)
@@ -13,6 +14,7 @@ const userRegister = async (req, res) => {
       name: name,
       email: email,
       password: hashedPassword,
+      image
     });
     const response = await user.save();
     res
